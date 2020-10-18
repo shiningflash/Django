@@ -1,0 +1,5 @@
+- `pipenv install django` - install django in the project
+- `pipenv shell` - activate virtual env
+- `django-admin startproject <project-name> .` - create and start django project
+- `python3 manage.py runserver` - run the project
+- `python3 manage,py startapp <app-name>` - create a new app in the project
