@@ -10,5 +10,11 @@ def home(request):
     
     if val1 and val2:
         sum = int(val1) + int(val2)
+        
+    context = {
+        'val1': val1,
+        'val2': val2,
+        'result': sum
+    }
     
-    return render(request, 'home.html', {'val1': val1, 'val2': val2, 'result': sum})
+    return render(request, 'home.html', context)
