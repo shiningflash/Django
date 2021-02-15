@@ -1,4 +1,4 @@
-# Webpage that add two number
+# Webpage that adds two number
 
 ### Preview
 
