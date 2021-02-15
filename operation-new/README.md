@@ -3,7 +3,7 @@
 ### Preview
 
 **Before Operation**
-<img src="./before-operation.png">
+<img src="preview/before-operation.png">
 
 **After Operation**
-<img src="./after-operation.png">
+<img src="preview/after-operation.png">
