@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,33 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sum Calculator</title>
 
-    <style>
-        body {
-            font-family: Arial;
-        }
-
-        .container {
-          height: 300px;
-          position: relative;
-          /* border: 3px solid pink; */
-          border: 3px solid green;
-        }
-        
-        .center {
-          margin: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-        }
-
-        .brown_bold {
-            color: brown;
-            top: 20%;
-            font-weight: bold;
-        }
-    </style>        
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
 
 </head>
 
