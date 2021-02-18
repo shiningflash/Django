@@ -1,6 +1,8 @@
-# django# Django REST-Framework
+# django
 
-## CRUD
+## Django REST-Framework
+
+### CRUD
 
 * Create / Insert / Add - `POST`
 * Retrive / Fetch - `GET`
