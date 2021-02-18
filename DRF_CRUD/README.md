@@ -9,11 +9,11 @@
 
 -----------
 
-GET: http://127.0.0.1:8000/student/
+#### GET: http://127.0.0.1:8000/student/
 
 GET /student/
 
-```JSON
+```json
 HTTP 200 OK
 Allow: GET, POST, HEAD, OPTIONS
 Content-Type: application/json
@@ -39,9 +39,11 @@ Vary: Accept
 
 ----------
 
-POST: http://127.0.0.1:8000/student/
+#### POST: http://127.0.0.1:8000/student/
 
-```JSON
+POST /student/
+
+```json
 {
     "id": 2,
     "student_id": "17986745",
@@ -53,8 +55,7 @@ POST: http://127.0.0.1:8000/student/
 
 Then,
 
-```JSON
-POST /student/
+```json
 HTTP 201 Created
 Allow: GET, POST, HEAD, OPTIONS
 Content-Type: application/json
@@ -71,12 +72,11 @@ Vary: Accept
 
 -----------
 
-GET: http://127.0.0.1:8000/student/2
+#### GET: http://127.0.0.1:8000/student/2
 
 GET /student/2
 
-```JSON
-GET /student/2/
+```json
 HTTP 200 OK
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 Content-Type: application/json
@@ -93,12 +93,11 @@ Vary: Accept
 
 --------------
 
-PUT: http://127.0.0.1:8000/student/2/
+#### PUT: http://127.0.0.1:8000/student/2/
 
 PUT /student/2
 
-```JSON
-PUT /student/2/
+```json
 HTTP 200 OK
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 Content-Type: application/json
