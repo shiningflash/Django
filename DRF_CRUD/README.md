@@ -93,9 +93,9 @@ Vary: Accept
 
 --------------
 
-GET: http://127.0.0.1:8000/student/2/
+PUT: http://127.0.0.1:8000/student/2/
 
-GET /student/2
+PUT /student/2
 
 ```JSON
 PUT /student/2/
