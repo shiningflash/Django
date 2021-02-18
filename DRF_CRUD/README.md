@@ -9,7 +9,7 @@
 
 -----------
 
-#### GET: http://127.0.0.1:8000/student/
+### GET: http://127.0.0.1:8000/student/
 
 GET /student/
 
@@ -39,7 +39,7 @@ Vary: Accept
 
 ----------
 
-#### POST: http://127.0.0.1:8000/student/
+### POST: http://127.0.0.1:8000/student/
 
 POST /student/
 
@@ -72,7 +72,7 @@ Vary: Accept
 
 -----------
 
-#### GET: http://127.0.0.1:8000/student/2
+### GET: http://127.0.0.1:8000/student/2
 
 GET /student/2
 
@@ -93,7 +93,7 @@ Vary: Accept
 
 --------------
 
-#### PUT: http://127.0.0.1:8000/student/2/
+### PUT: http://127.0.0.1:8000/student/2/
 
 PUT /student/2
 
