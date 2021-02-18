@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 <h1> Hello!!! </h1>
 
-<form action="addnum">
-    Enter 1st Number : <input type="text" name="num1"><br>
-    Enter 2nd Number : <input type="text" name="num2"><br>
-    <input type="submit">
+<form action="#" method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <!-- <table>{{ form.as_table }}</table> -->
+    <button type="submit" class="btn btn-primary">Add</button>
 </form>
 
 {% endblock %}

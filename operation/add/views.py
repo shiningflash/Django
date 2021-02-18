@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import InputForm
 
 def home(request):
-    return render(request, 'home.html')
+    context = {}
+    context['form'] = InputForm()
+    return render(request, 'home.html', context)
 
 def addnum(request):
     val1 = int(request.GET["num1"])
