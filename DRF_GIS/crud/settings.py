@@ -79,9 +79,9 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.postgresql',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'studentdb',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
+        'NAME': 'geodb',
+        'USER': 'root',
+        'PASSWORD': 'root',
         'HOST': 'localhost'
     }
 }
