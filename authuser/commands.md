@@ -21,7 +21,7 @@ $ python3 manage.py startapp main
 - `'crispy_forms', 'main'`
 
 - then add templates and html files
-- change: TEMPLATES => `'DIRS': [BASE_DIR / 'templates'],``
+- change: TEMPLATES => `'DIRS': [BASE_DIR / 'templates'],`
 - add this line in settings.py => `CRISPY_TEMPLATE_PACK = 'bootstrap4'`
 
 - then, fix the urls in mysite
