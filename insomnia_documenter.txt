@@ -1,0 +1,32 @@
+1. go to Insomnia Preference >> Export data
+2. Install node and check version using 'node --version'
+3. Then, use following command to create document
+
+$ npx insomnia-documenter --config <exported_file_name.json>
+
+4. create a folder for documentation and styles
+$ npx insomnia-documenter --config <exported_file_name.json> --output <folder_name>
+
+5. go to the folder
+$ cd <folder_name>
+
+6. go to the folder and open index.html file in the browser (it will not work though)
+7. to make it workable, use the following command
+$ npm server
+
+8. use the address 
+   - Local:            http://localhost:5000        │
+   - On Your Network:  http://192.168.68.113:5000
+
+9. (not mendatory) install now to Deploy your Static Website to Now.sh
+$ npm i -g vercel
+
+then, just type now for deployment and use the url to visit the site
+$ now
+
+10. (not mendatory) to access it from localhost, open the index.html and change in the body
+<div id="app"></div>
+to,
+<div id="app" data-root="/docs"></div>
+
+the access it from localhost:5000
