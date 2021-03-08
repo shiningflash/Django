@@ -1,0 +1,62 @@
+
+
+
+docker-compose exec app bash
+$ ./manage.py migrate
+
+
+docker-compose exec db bash
+psql -U hospital -p 5432 -d hospital
+
+
+
+
+1 square hospital 23.7532 90.3817
+2 apollo hospital 23.8099 90.4311
+3 united hospital 23.8046 90.4155
+
+
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.8046 90.4155)', 4326), 'United Hospital', True);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.7257 90.3971)', 4326), 'Dhaka Medical', True);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.7532 90.3817)', 4326), 'Square Hospital', True);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.8099 90.4311)', 4326), 'Apollo Hospital', True);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.7465 90.3858)', 4326), 'GreenLife Hospital', True);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.8460 90.4219)', 4326), 'Kurmitoal Hospital', True);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.7419 90.3830)', 4326), 'Labaid Hospital', True);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.7147 90.4005)', 4326), 'KG Hospital', True);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.7454 90.3723)', 4326), 'IBNSina Hospital', False);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.7506 90.3698)', 4326), 'Bangladesh Medical Hospital', False);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.7257 90.3971)', 4326), 'Dhaka Medical', True);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(24.9075 91.8887)', 4326), 'Bokkho Badhi Hospital', True);
+INSERT INTO geoapp_hospital  (location, name, active_status) values (ST_GeomFromText('POINT(23.7783 90.4097)', 4326), 'Cancer Research & Hospital', True);
+
+
+
+UPDATE geoapp_hospital set location=ST_GeomFromText('POINT(23.8046 90.4155)', 4326) where id = 1;
+
+
+SELECT ST_Distance(
+		'SRID=4326;POINT(ST_X(location) ST_Y(location)'::geometry,
+		'SRID=4326;POINT(ST_X(location) ST_Y(location)'::geometry
+	);
+
+
+SELECT ST_Distance( (SELECT location from geoapp_hospital where id = 1)), (SELECT location from geoapp_hospital where id = 2)), );
+
+SELECT ST_Distance( (SELECT location from geoapp_hospital where id = 1), (SELECT location from geoapp_hospital where id = 2) );
+
+
+
+CREATE INDEXING
+-
+create index geoapp_hospital_location_idx on geoapp_hospital (location);
+
+EXPLAIN ANALYZE
+-
+explain analyze <sql query>
+
+
+
+query:
+-
+http://localhost:8010/hospitallist/hospital/?name=United
