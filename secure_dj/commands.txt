@@ -1,0 +1,13 @@
+mkdir <dir_name>
+cd <dir_name>
+
+pip3 install pipenv
+
+pipenv install django djangorestframework
+
+pipenv run python3 manage.py runserver
+
+pipenv run python3 manage.py makemigrations
+pipenv run python3 manage.py migrate
+pipenv run python3 manage.py createsuperuser
+
