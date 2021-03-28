@@ -8,7 +8,7 @@ from .serializers import EmployeeSerializer, CustomerSerializer, DepartmentSeria
 
 
 class EmployeeListView(generics.views.APIView):
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     
     def get(self, request):
         employees = Employee.objects.all()
@@ -23,7 +23,7 @@ class EmployeeListView(generics.views.APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 class EmployeeDetailsView(generics.views.APIView):
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     
     def get_object(self, pk):
         try:
@@ -45,7 +45,7 @@ class EmployeeDetailsView(generics.views.APIView):
         
 
 class DepartmentListView(generics.views.APIView):
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     
     def get(self, request):
         department = Department.objects.all()
